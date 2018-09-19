@@ -1,0 +1,13 @@
+.topMenu {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background: var(--header-bg)
+}
+
+.content {
+  padding-top: 50px;
+}
