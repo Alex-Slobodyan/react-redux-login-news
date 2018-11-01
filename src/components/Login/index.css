@@ -1,0 +1,22 @@
+.login {
+  width: 400px;
+  margin: auto;
+
+  &__btn {
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+    border: none;
+    font-size: 16px;
+    border-radius: 3px;
+  }
+
+  &__input {
+    height: 35px;
+    width: 100%;
+    margin: 5px;
+    padding: 0 5px;
+  }
+}

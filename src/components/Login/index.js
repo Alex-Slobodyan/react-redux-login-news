@@ -1,6 +1,8 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
 
+import styles from './index.css'
+
 class Login extends React.Component {
   state = {
     redirectToPreviousRoute: false,
@@ -43,24 +45,26 @@ class Login extends React.Component {
     }
 
     return (
-      <div>
+      <div className={styles.login}>
         {errorMsg && <p>{errorMsg}</p>}
         <form onSubmit={this.handleSubmit}>
           <input
             data-field-name={'username'}
             type={'text'}
             onChange={this.handleChange}
-            placeholder={'Имя'}
+            placeholder={'Имя пусто'}
             value={username}
+            className={styles.login__input}
           />
           <input
             data-field-name={'password'}
             type={'text'}
             onChange={this.handleChange}
-            placeholder={'Пароль'}
+            placeholder={'Пароль пусто'}
             value={password}
+            className={styles.login__input}
           />
-          <button type="submit">Log in</button>
+          <button className={styles.login__btn} type="submit">Log in</button>
         </form>
       </div>
     )
