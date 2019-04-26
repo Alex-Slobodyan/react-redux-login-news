@@ -1,13 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
+import { Translate } from 'react-localize-redux';
 
 import styles from './index.css';
 
-const LinkBtn = ( { to, label } ) => {
+const LinkBtn = ({ to, label, translateId } ) => {
   return (
     <Link to={to} className={styles.btn}>
-      {label}
+      <Translate id={translateId}>{label}</Translate>
     </Link>
   )
 }

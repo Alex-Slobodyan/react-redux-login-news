@@ -1,5 +1,6 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
+import { Translate } from 'react-localize-redux';
 
 import styles from './index.css'
 
@@ -10,16 +11,13 @@ class Login extends React.Component {
     password: '',
   }
 
+
   handleSubmit = e => {
+    console.table(this.props)
     e.preventDefault()
     const { username, password } = this.state
 
-    this.props.logIn(
-      {
-        username,
-        password,
-      },
-      () => {
+    this.props.logIn({ username, password }, () => {
         this.setState( { redirectToPreviousRoute: true } )
       }
     )
@@ -64,7 +62,9 @@ class Login extends React.Component {
             value={password}
             className={styles.login__input}
           />
-          <button className={styles.login__btn} type="submit">Log in</button>
+          <button className={styles.login__btn} type="submit">
+            <Translate id="btn.logIn">Логин</Translate>
+          </button>
         </form>
       </div>
     )

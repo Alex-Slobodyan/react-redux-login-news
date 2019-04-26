@@ -1,12 +1,11 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import find from 'lodash/find'
-import LinkBtn from '../linkBtn'
-
+import LinkBtn from '../../../../components/linkBtn'
 
 import styles from './index.css'
 
 const NewsId = ( { newsID, match } ) => {
+  console.log('this.props.history', match.params)
 
   const findId = () => {
     const { id } = match.params
@@ -16,7 +15,7 @@ const NewsId = ( { newsID, match } ) => {
   const idNews = findId()
   return (
     <div className={styles.news}>
-      <LinkBtn to="/news" label="Назад" />
+      <LinkBtn to="/news" label="Назад" translateId="btn.back" />
       <header className={styles.news__header}>{idNews.title}</header>
       <img className={styles.news__img} src={idNews.urlToImage} alt={idNews.title} />
       <p>{idNews.content}</p>
@@ -24,10 +23,4 @@ const NewsId = ( { newsID, match } ) => {
   )
 }
 
-const mapStateToProps = ( state ) => {
-  return ( {
-    newsID: state.news.items
-  } )
-}
-
-export default connect( mapStateToProps, null )( NewsId )
+export default NewsId

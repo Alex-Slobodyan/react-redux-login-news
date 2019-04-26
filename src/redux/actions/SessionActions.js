@@ -1,8 +1,10 @@
-import { checkCredentials } from '../helpers/session'
+import { checkCredentials } from '../../helpers/session'
 
-export const LOG_IN = 'LOG_IN'
-export const LOG_OUT = 'LOG_OUT'
-export const LOG_IN_FAILURE = 'LOG_IN_FAILURE'
+import {
+  LOG_IN,
+  LOG_OUT,
+  LOG_IN_FAILURE
+} from '../actionsTypes'
 
 export function logIn( params, cb ) {
   return dispatch => {

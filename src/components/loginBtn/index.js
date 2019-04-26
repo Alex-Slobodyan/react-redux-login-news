@@ -1,8 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import LinkBtn from '../linkBtn/'
-import { LOG_OUT } from '../../actions/SessionActions'
+import { LOG_OUT } from '../../redux/actions/SessionActions'
 import { Link } from 'react-router-dom'
+import { Translate } from 'react-localize-redux';
 
 import styles from './index.css';
 
@@ -14,10 +15,10 @@ const LoginBtn = ( { isAuth, lod_out } ) => {
       {
         isAuth ?
           <Link to="/" className={styles.login__btn} onClick={_logOut}>
-            Log Out
+            <Translate id="btn.logOut">Выйти</Translate>
           </Link>
           :
-          <LinkBtn className={styles.login__btn} to="/login" label="Log In" />
+          <LinkBtn className={styles.login__btn} to="/login" label="Логин" translateId="btn.logIn" />
       }
     </div>
   )

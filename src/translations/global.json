@@ -1,0 +1,13 @@
+{
+  "btn": {
+    "home": ["Главная", "Home"],
+    "news": ["Новости", "News"],
+    "logIn": ["Логин", "Log In"],
+    "logOut": ["Выйти", "Log out"],
+    "back": ["Назад", "Back"]
+  },
+  "inputs": {
+    "pass": ["Пароль", "Pass"],
+    "name": ["Имя", "Name"]
+  }
+}

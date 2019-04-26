@@ -1,7 +1,7 @@
 import {
   FETCH_NEWS_SUCCESS,
   FETCH_NEWS_FINALLY
-} from '../actions/NewsAction'
+} from '../actionsTypes'
 
 const initialState = {
   loader: true,

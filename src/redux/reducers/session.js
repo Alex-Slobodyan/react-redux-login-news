@@ -1,4 +1,8 @@
-import { LOG_IN, LOG_OUT, LOG_IN_FAILURE } from '../actions/SessionActions'
+import {
+  LOG_IN_FAILURE,
+  LOG_OUT,
+  LOG_IN
+} from '../actionsTypes'
 
 const initialState = {
   user: null,
